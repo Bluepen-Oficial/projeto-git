@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 01</title>
 </head>
+
 <body>
     <h1>Aula 01 - Git</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat inventore esse explicabo consectetur neque molestiae nisi? Mollitia dignissimos voluptas consequatur magni molestiae assumenda libero veritatis, recusandae commodi, odio, eum architecto.</p>
+    <label for="nome">Informe seu nome:</label><br>
+    <input type="text" placeholder="Digite seu nome..." id="nome"><br>
+    <label for="idade">Iforme sua idade:</label><br>
+    <input type="number" placeholder="Informe sua idade..." id="idade"><br><br>
+    <button id="botao">Enviar</button><br><br>
+
+    <p id="resultado"></p>
+    <script>
+        let nome = document.querySelector('#nome');
+        let idade = document.querySelector('#idade');
+        let saida = document.querySelector('#resultado');
+        let botao = document.querySelector('#botao');
+
+        botao.addEventListener('click', () => {
+            saida.textContent = `Seu nome é ${nome.value} e você tem ${idade.value} anos.`;
+        })
+
+    </script>
 </body>
+
 </html>
